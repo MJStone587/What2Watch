@@ -8,6 +8,7 @@ const bttn3 = document.querySelector(".btn_movie3");
 const bttn4 = document.querySelector(".btn_movie4");
 const btn = document.querySelectorAll(".btn");
 const modal = document.querySelector(".modal");
+const posters = document.querySelectorAll(".individual_posters");
 
 // functions for opening and closing all modals and overlays
 const openModal = function () {
@@ -19,36 +20,25 @@ const closeModal = function () {
   modal.classList.add("hidden");
   overlay.classList.add("hidden");
 };
-
-btn,
-  addEventListener("click", () => {
+/* add event listener to open modal for each btn*/
+for (let i = 0; i < btn.length; i++) {
+  btn[i].addEventListener("click", () => {
     openModal();
+    console.log(btn[i].id);
   });
-btn.forEach((el) => console.log(el.id));
-
-const btnFnct = (btn) => {
-  if (btn == bttn1) {
-    console.log("btn 1 clicked");
-  } else if (btn == bttn2) {
-    console.log("btn2 clicked");
-  } else if (btn == bttn3) {
-    console.log("btn3 clicked");
-  }
-};
-bttn1.addEventListener("click", () => {
-  openModal();
-});
+}
 
 /* When clicking close button close modals and overlays */
 btnClose.addEventListener("click", () => {
   closeModal();
-  console.log(modal.classList);
-  console.log("close button clicked");
 });
 
-fetch("movieDB.json")
-  .then((response) => response.json())
-  .then((data) => {
-    console.log(data);
-    console.log(data.movies[0].cast);
-  });
+const populateCont2 = function () {
+  fetch("movieDB.json")
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data);
+      for (var i = 0; i < 4; i++) {}
+    });
+};
+populateCont2();
