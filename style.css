@@ -160,24 +160,29 @@ Name: Mark Johnston
   display: flex;
   flex-flow: row nowrap;
   order: 1;
-  flex: 1;
+  flex: 2;
   padding: 0;
   margin-left: 100px;
 }
 .container2-left img {
-  height: 23vw;
+  height: 50vh;
   width: 15vw;
 }
 .container2-left h1 {
   color: white;
-  font-size: 1.1vw;
+  font-size: 20px;
   font-weight: bold;
   margin-top: 10px;
 }
-.container2-left h2,
-h3 {
+.container2-left h2 {
   color: rgba(255, 255, 255, 0.589);
-  font-size: 1vw;
+  font-size: 15px;
+  font-weight: normal;
+  margin-top: 5px;
+}
+.container2-left h3 {
+  color: rgba(255, 255, 255, 0.589);
+  font-size: 15px;
   font-weight: normal;
   margin-top: 5px;
 }
@@ -197,7 +202,8 @@ h3 {
 .individual_posters {
   display: flex;
   flex-flow: column wrap;
-  flex: auto;
+  justify-content: flex-start;
+  flex: 1;
   padding: 0;
   margin: 0;
 }
@@ -590,10 +596,13 @@ footer h3 {
   top: 1.2rem;
   right: 2rem;
   font-size: 3rem;
-  color: #333;
+  color: rgb(145, 145, 145);
   cursor: pointer;
   border: none;
   background: none;
+}
+.btn_close:hover {
+  color: black;
 }
 .modal {
   position: fixed;

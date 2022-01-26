@@ -12,7 +12,7 @@
       "imdb": "6.8",
       "synopsis": "Lena, a biologist and former soldier, joins a mission to uncover what happened to her husband inside Area X -- a sinister and mysterious phenomenon that is expanding across the American coastline. Once inside, the expedition discovers a world of mutated landscapes and creatures, as dangerous as it is beautiful, that threatens both their lives and their sanity.",
       "trailer": "https://www.youtube.com/watch?v=89OP78l9oF0",
-      "poster": "https://img.moviepostershop.com/annihilation-movie-poster-2018-1010777981.jpg",
+      "poster": "https://blog.vidangel.com/wp-content/uploads/2018/05/Annihilation.jpg",
       "cast": [
         "Natalie Portman",
         "Jennifer Jason Leigh",
@@ -24,29 +24,18 @@
     },
     {
       "id": 1,
-      "title": "Lord of the Rings: Fellowship of the Ring",
-      "genre": ["Action", "Drama", "Fantasy", "Thriller"],
+      "title": "John Wick",
+      "genre": ["Action", "Drama"],
       "movie": 1,
       "series": 0,
-      "released": "2001",
-      "director": "Peter Jackson",
-      "tomato": "92",
-      "imdb": "8.8",
-      "synopsis": "The future of civilization rests in the fate of the One Ring, which has been lost for centuries. Powerful forces are unrelenting in their search for it. But fate has placed it in the hands of a young Hobbit named Frodo Baggins (Elijah Wood), who inherits the Ring and steps into legend. A daunting task lies ahead for Frodo when he becomes the Ringbearer - to destroy the One Ring in the fires of Mount Doom where it was forged.",
-      "trailer": "https://www.youtube.com/watch?v=_e8QGuG50ro",
-      "poster": "https://img.moviepostershop.com/lord-of-the-rings-1-the-fellowship-of-the-ring-movie-poster-2001-1010186895.jpg",
-      "cast": [
-        "Viggo Mortensen",
-        "Elijah Wood",
-        "Ian Mckellen",
-        "Orlando Bloom",
-        "Cate Blanchett",
-        "Sean Astin",
-        "Liv Tyler",
-        "Hugo Weaving",
-        "Andy Serkis",
-        "Sean Bean"
-      ]
+      "released": "2014",
+      "director": "Chad Stahelski",
+      "tomato": "86%",
+      "imdb": "7.4",
+      "synopsis": "Legendary assassin John Wick (Keanu Reeves) retired from his violent career after marrying the love of his life. Her sudden death leaves John in deep mourning. When sadistic mobster Iosef Tarasov (Alfie Allen) and his thugs steal John's prized car and kill the puppy that was a last gift from his wife, John unleashes the remorseless killing machine within and seeks vengeance. Meanwhile, Iosef's father (Michael Nyqvist) -- John's former colleague -- puts a huge bounty on John's head.",
+      "trailer": "https://www.youtube.com/watch?v=2AUmvWm5ZDQ",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMTU2NjA1ODgzMF5BMl5BanBnXkFtZTgwMTM2MTI4MjE@._V1_.jpg",
+      "cast": ["Keanu Reeves", "Michael Nyqvist", "Alfie Allen", "Willem Dafoe"]
     },
     {
       "id": 2,
@@ -60,7 +49,7 @@
       "imdb": "7.9",
       "synopsis": "Linguistics professor Louise Banks (Amy Adams) leads an elite team of investigators when gigantic spaceships touch down in 12 locations around the world. As nations teeter on the verge of global war, Banks and her crew must race against time to find a way to communicate with the extraterrestrial visitors. Hoping to unravel the mystery, she takes a chance that could threaten her life and quite possibly all of mankind.",
       "trailer": "https://www.youtube.com/watch?v=tFMo3UJ4B4g",
-      "poster": "https://img.moviepostershop.com/arrival-movie-poster-2016-1010776668.jpg",
+      "poster": "https://cdn.shopify.com/s/files/1/0057/3728/3618/products/001de609b41d1ddd9a48dff3195f03a4_70640627-9f9d-41a4-bf5b-e99982a4abbc_480x.progressive.jpg?v=1573617541",
       "cast": [
         "Amy Adams",
         "Jeremy Renner",
@@ -80,7 +69,7 @@
       "imdb": "7.7",
       "synopsis": "Now that Chris and his girlfriend, Rose, have reached the meet-the-parents milestone of dating, she invites him for a weekend getaway upstate with her parents, Missy and Dean. At first, Chris reads the family's overly accommodating behaviour as nervous attempts to deal with their daughter's interracial relationship, but as the weekend progresses, a series of increasingly disturbing discoveries leads him to a truth that he never could have imagined.",
       "trailer": "https://www.youtube.com/watch?v=tFMo3UJ4B4g",
-      "poster": "https://img.moviepostershop.com/arrival-movie-poster-2016-1010776668.jpg",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMjUxMDQwNjcyNl5BMl5BanBnXkFtZTgwNzcwMzc0MTI@._V1_.jpg",
       "cast": [
         "Daniel Kaluuya",
         "Allison Willams",
@@ -90,19 +79,31 @@
     },
     {
       "id": 4,
-      "title": "John Wick",
-      "genre": ["Action", "Drama"],
+      "title": "Lord of the Rings: Fellowship of the Ring",
+      "genre": ["Action", "Drama", "Fantasy", "Thriller"],
       "movie": 1,
       "series": 0,
-      "released": "2014",
-      "director": "Chad Stahelski",
-      "tomato": "86%",
-      "imdb": "7.4",
-      "synopsis": "Legendary assassin John Wick (Keanu Reeves) retired from his violent career after marrying the love of his life. Her sudden death leaves John in deep mourning. When sadistic mobster Iosef Tarasov (Alfie Allen) and his thugs steal John's prized car and kill the puppy that was a last gift from his wife, John unleashes the remorseless killing machine within and seeks vengeance. Meanwhile, Iosef's father (Michael Nyqvist) -- John's former colleague -- puts a huge bounty on John's head.",
-      "trailer": "https://www.youtube.com/watch?v=2AUmvWm5ZDQ",
-      "poster": "https://img.moviepostershop.com/john-wick-movie-poster-2014-1020770958.jpg",
-      "cast": ["Keanu Reeves", "Michael Nyqvist", "Alfie Allen", "Willem Dafoe"]
+      "released": "2001",
+      "director": "Peter Jackson",
+      "tomato": "92",
+      "imdb": "8.8",
+      "synopsis": "The future of civilization rests in the fate of the One Ring, which has been lost for centuries. Powerful forces are unrelenting in their search for it. But fate has placed it in the hands of a young Hobbit named Frodo Baggins (Elijah Wood), who inherits the Ring and steps into legend. A daunting task lies ahead for Frodo when he becomes the Ringbearer - to destroy the One Ring in the fires of Mount Doom where it was forged.",
+      "trailer": "https://www.youtube.com/watch?v=_e8QGuG50ro",
+      "poster": "https://m.media-amazon.com/images/I/81EBp0vOZZL._AC_SY741_.jpg",
+      "cast": [
+        "Viggo Mortensen",
+        "Elijah Wood",
+        "Ian Mckellen",
+        "Orlando Bloom",
+        "Cate Blanchett",
+        "Sean Astin",
+        "Liv Tyler",
+        "Hugo Weaving",
+        "Andy Serkis",
+        "Sean Bean"
+      ]
     },
+
     {
       "id": 5,
       "title": "Arcane",
