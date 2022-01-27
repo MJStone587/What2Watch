@@ -253,11 +253,11 @@ Name: Mark Johnston
   align-items: flex-start;
   background-color: black;
   color: white;
-  height: 100vh;
-  padding-top: 200px;
+  height: 99vh;
+  margin-top: 250px;
   padding-left: 120px;
 }
-.container3 img {
+.cont3-img {
   height: 76vh;
   width: 55vh;
 }
@@ -267,32 +267,34 @@ Name: Mark Johnston
 .container3-left {
   padding-right: 40px;
   padding-left: 20px;
+  margin-right: 100px;
+  margin-left: 100px;
 }
 .container3-right {
   display: flex;
   flex-flow: column nowrap;
-  margin-left: 5rem;
-  font-size: 1em;
-  margin-right: 12rem;
-  padding-top: 4rem;
+  margin-left: 50px;
+  margin-right: 150px;
+  padding-top: 80px;
 }
 .container3-right h3 {
   color: rgba(172, 16, 16, 0.863);
-  font-size: 1.25rem;
+  font-size: 23px;
 }
 .container3-right h1 {
   font-family: "Bellota Text", cursive;
-  margin-top: 0.3rem;
-  font-size: 2.7em;
+  margin-top: 10px;
+  font-size: 70px;
   font-weight: 100;
 }
 .container3-right p {
   color: rgba(255, 255, 255, 0.589);
-  padding-top: 0.2rem;
-  padding-bottom: 1rem;
-  font-size: 1.1vw;
+  padding-top: 5px;
+  padding-bottom: 40px;
+  padding-right: 30px;
+  font-size: 18px;
 }
-.container3-right #btn_trailer {
+.btn_trailer {
   width: 200px;
   height: 50px;
   background-color: red;
@@ -301,11 +303,11 @@ Name: Mark Johnston
   border: 1px solid red;
   border-radius: 2px;
 }
-.container3-right #btn_trailer:hover {
+.btn_trailer:hover {
   cursor: pointer;
   color: black;
 }
-.container3-right #btn_viewMore {
+.btn_viewMore {
   margin-top: 20px;
   width: 300px;
   height: 50px;
@@ -315,7 +317,7 @@ Name: Mark Johnston
   border: 1px solid rgb(165, 16, 16);
   border-radius: 2px;
 }
-.container3-right #btn_viewMore:hover {
+.btn_viewMore:hover {
   background-color: rgb(143, 10, 10);
 }
 

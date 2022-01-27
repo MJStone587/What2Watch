@@ -10,11 +10,6 @@ const btn = document.querySelectorAll(".btn");
 const modal = document.querySelector(".modal");
 const posters = document.querySelectorAll(".individual_posters");
 
-/* Generate Random Number based on length of api array length */
-const randomNum = function (data) {
-  return Math.floor(Math.random() * data.movies.length);
-};
-
 /* Populate Container 2 with data from API */
 const populateCont2 = function (data) {
   for (var i = 0; i < 4; i++) {
@@ -27,6 +22,20 @@ const populateCont2 = function (data) {
     h2[i].innerHTML = data.movies[i].director;
     h3[i].innerHTML = data.movies[i].released;
   }
+};
+
+/* populate container 3 information with a random movie from api */
+const populateCont3 = function (data) {
+  const cont3_img = document.querySelector(".cont3-img");
+  const cont3_h1 = document.querySelector(".cont3-h1");
+  const cont3_p = document.querySelector(".cont3-p");
+  const viewMore = document.querySelector(".btn_viewMore");
+  var num = Math.floor(Math.random() * data.movies.length);
+
+  cont3_img.src = data.movies[num].poster;
+  cont3_h1.innerHTML = data.movies[num].title;
+  cont3_p.innerHTML = data.movies[num].synopsis;
+  viewMore.id = num;
 };
 // functions for opening modal
 const openModal = function () {
@@ -56,6 +65,8 @@ const modalMoreInfo = (data) => {
   console.log(btn.id);
 };
 
+/* populate modal with data of correlating show/movie */
+const populateModal = () => {};
 /* Fetch Data from API */
 const fetchData = function () {
   fetch("movieDB.json")
@@ -63,7 +74,7 @@ const fetchData = function () {
     .then((data) => {
       console.log(data);
       populateCont2(data);
-      let getNum = randomNum(data);
+      populateCont3(data);
     });
 };
 fetchData();
