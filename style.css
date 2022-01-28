@@ -276,6 +276,7 @@ Name: Mark Johnston
   margin-left: 50px;
   margin-right: 150px;
   padding-top: 80px;
+  padding-right: 100px;
 }
 .container3-right h3 {
   color: rgba(172, 16, 16, 0.863);
@@ -622,6 +623,10 @@ footer h3 {
 h3,
 p {
   color: black;
+}
+.modal iframe {
+  height: 400px;
+  width: 600px;
 }
 .hidden {
   display: none;

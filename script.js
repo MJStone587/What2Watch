@@ -25,13 +25,14 @@ const populateCont2 = function (data) {
 };
 
 /* populate container 3 information with a random movie from api */
-const populateCont3 = function (data) {
+const populateCont3 = (data) => {
   const cont3_img = document.querySelector(".cont3-img");
   const cont3_h1 = document.querySelector(".cont3-h1");
   const cont3_p = document.querySelector(".cont3-p");
   const viewMore = document.querySelector(".btn_viewMore");
+  const trailer = document.querySelector(".btn_trailer");
   var num = Math.floor(Math.random() * data.movies.length);
-
+  trailer.id = num;
   cont3_img.src = data.movies[num].poster;
   cont3_h1.innerHTML = data.movies[num].title;
   cont3_p.innerHTML = data.movies[num].synopsis;
@@ -47,13 +48,6 @@ const closeModal = function () {
   modal.classList.add("hidden");
   overlay.classList.add("hidden");
 };
-/* add event listener to open modal for each btn*/
-for (let i = 0; i < btn.length; i++) {
-  btn[i].addEventListener("click", () => {
-    openModal();
-    console.log(btn[i].id);
-  });
-}
 
 /* Close modal when clicking overlay or close button */
 window.addEventListener("click", function (event) {
@@ -61,12 +55,53 @@ window.addEventListener("click", function (event) {
     closeModal();
   }
 });
-const modalMoreInfo = (data) => {
-  console.log(btn.id);
-};
 
 /* populate modal with data of correlating show/movie */
-const populateModal = () => {};
+const populateModal = (data) => {
+  const btn = document.querySelectorAll(".btn");
+  const modalTitle = document.querySelector(".modal_title");
+  const modalReleased = document.querySelector(".modal_released");
+  const modalDirector = document.querySelector(".modal_director");
+  const modalTomato = document.querySelector(".modal_tomato");
+  const modalImdb = document.querySelector(".modal_imdb");
+  const modalPlot = document.querySelector(".modal_plot");
+  const iframe = document.querySelector(".iframe");
+  for (let i = 0; i < btn.length; i++) {
+    btn[i].addEventListener("click", () => {
+      openModal();
+      iframe.classList.add("hidden");
+      modalTitle.innerHTML = data.movies[btn[i].id].title;
+      modalReleased.innerHTML = "Released: " + data.movies[btn[i].id].released;
+      modalDirector.innerHTML = "Director: " + data.movies[btn[i].id].director;
+      modalTomato.innerHTML = "Tomato Rating: " + data.movies[btn[i].id].tomato;
+      modalImdb.innerHTML = "IMDB Rating: " + data.movies[btn[i].id].imdb;
+      modalPlot.innerHTML = "Synopsis:  " + data.movies[btn[i].id].synopsis;
+    });
+  }
+};
+const populateTrailer = (data) => {
+  const trailer = document.querySelector(".btn_trailer");
+  const modalTitle = document.querySelector(".modal_title");
+  const modalReleased = document.querySelector(".modal_released");
+  const modalDirector = document.querySelector(".modal_director");
+  const modalTomato = document.querySelector(".modal_tomato");
+  const modalImdb = document.querySelector(".modal_imdb");
+  const modalPlot = document.querySelector(".modal_plot");
+  const iframe = document.querySelector(".iframe");
+  trailer.addEventListener("click", () => {
+    openModal();
+    iframe.classList.remove("hidden");
+    iframe.src = data.movies[trailer.id].trailer;
+    modalTitle.innerHTML = " ";
+    modalReleased.innerHTML = " ";
+    modalDirector.innerHTML = " ";
+    modalTomato.innerHTML = " ";
+    modalImdb.innerHTML = " ";
+    modalPlot.innerHTML = " ";
+    iframe.innerHTML = data.movies[trailer.id].title;
+    console.log(iframe.src);
+  });
+};
 /* Fetch Data from API */
 const fetchData = function () {
   fetch("movieDB.json")
@@ -75,6 +110,8 @@ const fetchData = function () {
       console.log(data);
       populateCont2(data);
       populateCont3(data);
+      populateModal(data);
+      populateTrailer(data);
     });
 };
 fetchData();
