@@ -87,10 +87,9 @@ const populateTrailer = (data) => {
   const modalTomato = document.querySelector(".modal_tomato");
   const modalImdb = document.querySelector(".modal_imdb");
   const modalPlot = document.querySelector(".modal_plot");
-  const iframe = document.querySelector(".iframe");
+  const iframe = document.querySelector(".trailer");
   trailer.addEventListener("click", () => {
     openModal();
-    iframe.classList.remove("hidden");
     iframe.src = data.movies[trailer.id].trailer;
     modalTitle.innerHTML = " ";
     modalReleased.innerHTML = " ";
@@ -98,7 +97,6 @@ const populateTrailer = (data) => {
     modalTomato.innerHTML = " ";
     modalImdb.innerHTML = " ";
     modalPlot.innerHTML = " ";
-    iframe.innerHTML = data.movies[trailer.id].title;
     console.log(iframe.src);
   });
 };
