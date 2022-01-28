@@ -65,11 +65,11 @@ const populateModal = (data) => {
   const modalTomato = document.querySelector(".modal_tomato");
   const modalImdb = document.querySelector(".modal_imdb");
   const modalPlot = document.querySelector(".modal_plot");
-  const iframe = document.querySelector(".iframe");
+  const trailer = document.querySelector(".btn_trailer");
+  trailer.href = data.movies[trailer.id].trailer;
   for (let i = 0; i < btn.length; i++) {
     btn[i].addEventListener("click", () => {
       openModal();
-      iframe.classList.add("hidden");
       modalTitle.innerHTML = data.movies[btn[i].id].title;
       modalReleased.innerHTML = "Released: " + data.movies[btn[i].id].released;
       modalDirector.innerHTML = "Director: " + data.movies[btn[i].id].director;
@@ -78,27 +78,6 @@ const populateModal = (data) => {
       modalPlot.innerHTML = "Synopsis:  " + data.movies[btn[i].id].synopsis;
     });
   }
-};
-const populateTrailer = (data) => {
-  const trailer = document.querySelector(".btn_trailer");
-  const modalTitle = document.querySelector(".modal_title");
-  const modalReleased = document.querySelector(".modal_released");
-  const modalDirector = document.querySelector(".modal_director");
-  const modalTomato = document.querySelector(".modal_tomato");
-  const modalImdb = document.querySelector(".modal_imdb");
-  const modalPlot = document.querySelector(".modal_plot");
-  const iframe = document.querySelector(".trailer");
-  trailer.addEventListener("click", () => {
-    openModal();
-    iframe.src = data.movies[trailer.id].trailer;
-    modalTitle.innerHTML = " ";
-    modalReleased.innerHTML = " ";
-    modalDirector.innerHTML = " ";
-    modalTomato.innerHTML = " ";
-    modalImdb.innerHTML = " ";
-    modalPlot.innerHTML = " ";
-    console.log(iframe.src);
-  });
 };
 /* Fetch Data from API */
 const fetchData = function () {
@@ -109,7 +88,13 @@ const fetchData = function () {
       populateCont2(data);
       populateCont3(data);
       populateModal(data);
-      populateTrailer(data);
     });
 };
 fetchData();
+
+const populateMovies = (data) => {
+  const displayPoster = document.querySelector(".displayPoster");
+  for (let i = 0; i < data.movies.length; i++) {
+    displayPoster.data;
+  }
+};
