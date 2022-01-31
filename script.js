@@ -9,6 +9,9 @@ const bttn4 = document.querySelector(".btn_movie4");
 const btn = document.querySelectorAll(".btn");
 const modal = document.querySelector(".modal");
 const posters = document.querySelectorAll(".individual_posters");
+const btnCloseMovies = document.querySelector(".btn_closeMovies");
+const overlayMovies = document.querySelector(".overlayMovies");
+const modalMovies = document.querySelector(".modalMovies");
 
 /* Populate Container 2 with data from API */
 const populateCont2 = function (data) {
@@ -48,14 +51,36 @@ const closeModal = function () {
   modal.classList.add("hidden");
   overlay.classList.add("hidden");
 };
-
+// close modal on page movies.html
+const closeModalMovies = function () {
+  modalMovies.classList.add("hidden");
+  overlayMovies.classList.add("hidden");
+};
+// open modal on page movies.html
+const openModalMovies = function () {
+  modalMovies.classList.remove("hidden");
+  overlayMovies.classList.remove("hidden");
+};
 /* Close modal when clicking overlay or close button */
 window.addEventListener("click", function (event) {
   if (event.target == overlay || event.target == btnClose) {
     closeModal();
   }
 });
-
+/* For movie.html Populate all poster images on display */
+const populateMovies = (data) => {
+  const posterContainer = document.querySelector(".movieGallery");
+  for (let i = 0; i < data.movies.length; i++) {
+    // FOR SELF LEARNING - newElement additions must be within the loop otherwise only creates one instead of multiples
+    const newDiv = document.createElement("div");
+    const newImg = document.createElement("img");
+    posterContainer.append(newDiv);
+    newDiv.classList.add("movieCard");
+    newDiv.id = i;
+    newDiv.append(newImg);
+    newImg.src = data.movies[i].poster;
+  }
+};
 /* populate modal with data of correlating show/movie */
 const populateModal = (data) => {
   const btn = document.querySelectorAll(".btn");
@@ -75,26 +100,28 @@ const populateModal = (data) => {
       modalDirector.innerHTML = "Director: " + data.movies[btn[i].id].director;
       modalTomato.innerHTML = "Tomato Rating: " + data.movies[btn[i].id].tomato;
       modalImdb.innerHTML = "IMDB Rating: " + data.movies[btn[i].id].imdb;
-      modalPlot.innerHTML = "Synopsis:  " + data.movies[btn[i].id].synopsis;
+      modalPlot.innerHTML = data.movies[btn[i].id].synopsis;
     });
   }
 };
+
 /* Fetch Data from API */
 const fetchData = function () {
   fetch("movieDB.json")
     .then((response) => response.json())
     .then((data) => {
       console.log(data);
-      populateCont2(data);
-      populateCont3(data);
-      populateModal(data);
+      if (
+        window.location.href == "http://127.0.0.1:5500/What2Watch/index.html"
+      ) {
+        populateCont2(data);
+        populateCont3(data);
+        populateModal(data);
+      } else if (
+        window.location.href == "http://127.0.0.1:5500/What2Watch/movies.html"
+      ) {
+        populateMovies(data);
+      }
     });
 };
 fetchData();
-
-const populateMovies = (data) => {
-  const displayPoster = document.querySelector(".displayPoster");
-  for (let i = 0; i < data.movies.length; i++) {
-    displayPoster.data;
-  }
-};
