@@ -660,6 +660,7 @@ p {
   background-color: rgb(0, 0, 0);
   order: 2;
   border: 1px dotted white;
+  height: 100vh;
 }
 .moviesContainer1-mid h1 {
   order: 1;
@@ -670,11 +671,11 @@ p {
   border: 1px solid white;
 }
 .movieGallery img {
-  height: 35vh;
-  width: 10vw;
+  height: 40vh;
+  width: 11.9vw;
 }
 .movieCard {
-  margin: 5px;
+  margin: 3px;
 }
 .movieCard:hover {
   cursor: pointer;

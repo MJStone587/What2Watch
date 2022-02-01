@@ -65,6 +65,7 @@ const openModalMovies = function () {
 window.addEventListener("click", function (event) {
   if (event.target == overlay || event.target == btnClose) {
     closeModal();
+    closeModalMovies();
   }
 });
 /* For movie.html Populate all poster images on display */
@@ -81,6 +82,7 @@ const populateMovies = (data) => {
     newImg.src = data.movies[i].poster;
   }
 };
+
 /* populate modal with data of correlating show/movie */
 const populateModal = (data) => {
   const btn = document.querySelectorAll(".btn");
