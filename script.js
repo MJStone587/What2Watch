@@ -112,13 +112,17 @@ const fetchData = function () {
     .then((data) => {
       console.log(data);
       if (
-        window.location.href == "http://127.0.0.1:5500/What2Watch/index.html"
+        window.location.href == "http://127.0.0.1:5500/What2Watch/index.html" ||
+        window.location.href == "https://mjstone587.github.io/What2Watch/"
       ) {
         populateCont2(data);
         populateCont3(data);
         populateModal(data);
       } else if (
-        window.location.href == "http://127.0.0.1:5500/What2Watch/movies.html"
+        window.location.href ==
+          "http://127.0.0.1:5500/What2Watch/movies.html" ||
+        window.location.href ==
+          "https://mjstone587.github.io/What2Watch/movies.html"
       ) {
         populateMovies(data);
       }
