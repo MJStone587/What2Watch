@@ -150,8 +150,8 @@ Name: Mark Johnston
   flex-flow: row nowrap;
   max-height: calc(100vh - 120px);
   background-color: rgb(0, 0, 0);
-  padding-left: 4rem;
-  padding-top: 1.45rem;
+  padding-left: 50px;
+  padding-top: 20px;
 }
 .container2 button:hover {
   cursor: pointer;
@@ -165,7 +165,7 @@ Name: Mark Johnston
   margin-left: 100px;
 }
 .container2-left img {
-  height: 50vh;
+  height: 48vh;
   width: 15vw;
 }
 .container2-left h1 {
@@ -562,14 +562,14 @@ footer #accent {
   color: rgba(224, 28, 28, 0.76);
 }
 footer h3 {
-  padding-top: 0.8rem;
-  font-size: 0.9vw;
+  padding-top: 20px;
+  font-size: 15px;
   color: gray;
 }
 .footer-left {
   order: 1;
   flex: 1;
-  font-size: 1rem;
+  font-size: 25px;
   padding-left: 50px;
 }
 .footer-middle {

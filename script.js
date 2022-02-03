@@ -65,22 +65,36 @@ const openModalMovies = function () {
 window.addEventListener("click", function (event) {
   if (event.target == overlay || event.target == btnClose) {
     closeModal();
-    closeModalMovies();
   }
 });
 /* For movie.html Populate all poster images on display */
 const populateMovies = (data) => {
   const posterContainer = document.querySelector(".movieGallery");
+  const cardArr = [];
   for (let i = 0; i < data.movies.length; i++) {
-    // FOR SELF LEARNING - newElement additions must be within the loop otherwise only creates one instead of multiples
+    // FOR SELF LEARNING - newElement additions must be within the loop scope otherwise only creates one instance instead of multiples
     const newDiv = document.createElement("div");
     const newImg = document.createElement("img");
     posterContainer.append(newDiv);
     newDiv.classList.add("movieCard");
-    newDiv.id = i;
     newDiv.append(newImg);
+    cardArr.push(newDiv);
     newImg.src = data.movies[i].poster;
   }
+  for (let i = 0; i < cardArr.length; i++) {
+    cardArr[i].firstChild.addEventListener(
+      "click",
+      (event) => (event.target.onclick = openModalMovies())
+    ); //ADD PER IMAGE MODAL INFO
+  }
+};
+// function to close modal on movies.html page when clicking outside modal or on close button
+const clickClose = function () {
+  window.addEventListener("click", function (event) {
+    if (event.target == overlayMovies || event.target == btnCloseMovies) {
+      closeModalMovies();
+    }
+  });
 };
 
 /* populate modal with data of correlating show/movie */
@@ -116,6 +130,7 @@ const fetchData = function () {
       if (
         window.location.href == "http://127.0.0.1:5500/What2Watch/index.html" ||
         window.location.href == "https://mjstone587.github.io/What2Watch/" ||
+        window.location.href == "http://127.0.0.1:5500/index.html" ||
         window.location.href == "http://127.0.0.1:5500"
       ) {
         populateCont2(data);
@@ -125,9 +140,11 @@ const fetchData = function () {
         window.location.href ==
           "http://127.0.0.1:5500/What2Watch/movies.html" ||
         window.location.href ==
-          "https://mjstone587.github.io/What2Watch/movies.html"
+          "https://mjstone587.github.io/What2Watch/movies.html" ||
+        window.location.href == "http://127.0.0.1:5500/movies.html"
       ) {
         populateMovies(data);
+        clickClose();
       }
     });
 };
