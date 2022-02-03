@@ -109,13 +109,14 @@ const populateModal = (data) => {
 
 /* Fetch Data from API */
 const fetchData = function () {
-  fetch("movieDB.json")
+  fetch("./database/movieDB.json")
     .then((response) => response.json())
     .then((data) => {
       console.log(data);
       if (
         window.location.href == "http://127.0.0.1:5500/What2Watch/index.html" ||
-        window.location.href == "https://mjstone587.github.io/What2Watch/"
+        window.location.href == "https://mjstone587.github.io/What2Watch/" ||
+        window.location.href == "http://127.0.0.1:5500"
       ) {
         populateCont2(data);
         populateCont3(data);
