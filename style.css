@@ -638,56 +638,34 @@ p {
 
 /*Movie Pages*/
 .moviesContainer1 {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-evenly;
-  background-color: black;
-}
-.moviesContainer1-left {
-  display: flex;
-  flex-flow: column nowrap;
-  order: 1;
-  flex-grow: 1;
-  color: rgb(116, 9, 9);
-  background-color: rgb(3, 3, 3);
-  padding-top: 100px;
-}
-.moviesContainer1-mid {
   /*top right bottom left */
+  display: flex;
+  flex-flow: column-reverse wrap;
+  padding-top: 50px;
   color: rgb(161, 11, 11);
-  flex-grow: 4;
-  margin: 100px 40px 2px 40px;
   background-color: rgb(0, 0, 0);
-  order: 2;
-  border: 1px dotted white;
-  height: 100vh;
+  border: 1px solid white;
 }
-.moviesContainer1-mid h1 {
+.moviesContainer1 h1 {
   order: 1;
+  padding-bottom: 5px;
 }
 .movieGallery {
   display: flex;
   flex-flow: row wrap;
   border: 1px solid white;
+  padding: 0px 10px 0px 75px;
 }
 .movieGallery img {
-  height: 40vh;
-  width: 11.9vw;
+  height: 22vh;
+  width: 17vw;
 }
 .movieCard {
-  margin: 3px;
+  margin: 2px;
 }
 .movieCard:hover {
   cursor: pointer;
-}
-.moviesContainer1-right {
-  display: flex;
-  flex-flow: column nowrap;
-  order: 3;
-  flex-grow: 2;
-  background-color: rgb(3, 3, 3);
-  color: rgb(116, 9, 9);
-  padding-top: 100px;
+  filter: brightness(125%);
 }
 
 .modalMovies {

@@ -67,7 +67,7 @@ window.addEventListener("click", function (event) {
     closeModal();
   }
 });
-/* For movie.html Populate all poster images on display */
+/* For movies.html Populate all poster images on display */
 const populateMovies = (data) => {
   const posterContainer = document.querySelector(".movieGallery");
   const cardArr = [];
@@ -79,14 +79,31 @@ const populateMovies = (data) => {
     newDiv.classList.add("movieCard");
     newDiv.append(newImg);
     cardArr.push(newDiv);
-    newImg.src = data.movies[i].poster;
+    const movieCard = document.querySelector(".movieCard");
+    movieCard.id = i;
+    newImg.src = data.movies[i].thumbnail;
   }
   for (let i = 0; i < cardArr.length; i++) {
     cardArr[i].firstChild.addEventListener(
       "click",
-      (event) => (event.target.onclick = openModalMovies())
-    ); //ADD PER IMAGE MODAL INFO
+      (event) => (
+        (event.target.onclick = openModalMovies()), putStuffHere(i, data)
+      )
+    );
   }
+};
+// rename some of these functions and clean shit up
+const putStuffHere = (i, data) => {
+  const modalMoviesTitle = document.querySelector(".movies_modalTitle");
+  const modalMoviesReleased = document.querySelector(".movies_modalReleased");
+  const modalMoviesRating = document.querySelector(".movies_modalRating");
+  const modalMoviesDirector = document.querySelector(".movies_modalDirector");
+  const modalMoviesTomato = document.querySelector(".movies_modalTomato");
+  modalMoviesTitle.innerHTML = data.movies[i].title;
+  modalMoviesReleased.innerHTML = "Released: " + data.movies[i].released;
+  modalMoviesDirector.innerHTML = "Director: " + data.movies[i].director;
+  modalMoviesTomato.innerHTML = "Tomato Rating: " + data.movies[i].tomato;
+  modalMoviesRating.innerHTML = "IMDB Rating: " + data.movies[i].imdb;
 };
 // function to close modal on movies.html page when clicking outside modal or on close button
 const clickClose = function () {
@@ -97,7 +114,7 @@ const clickClose = function () {
   });
 };
 
-/* populate modal with data of correlating show/movie */
+/* populate modal on index.html with data of correlating show/movie */
 const populateModal = (data) => {
   const btn = document.querySelectorAll(".btn");
   const modalTitle = document.querySelector(".modal_title");
