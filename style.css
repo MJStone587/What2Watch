@@ -384,10 +384,6 @@ Name: Mark Johnston
   color: rgb(2, 2, 138);
   margin: 0px 40px 5px 15px;
 }
-/* end index page content */
-.movie_data {
-  display: none;
-}
 /* end index page styling */
 
 .mod_movie {
@@ -443,7 +439,7 @@ Name: Mark Johnston
 }
 /* end add page */
 
-/* admin page */
+/* ------------------------------------------------------admin page --------------------------------------------------------------*/
 .admin_page {
   display: flex;
   flex-flow: column wrap;
@@ -541,7 +537,7 @@ Name: Mark Johnston
 .mod_movie {
   min-height: calc(100vh - 120px);
 }
-
+/*--------------------------------------------------------------END ADMIN PAGE----------------------------------------------------*/
 /* footer styling */
 footer {
   display: flex;
@@ -636,7 +632,7 @@ p {
   display: none;
 }
 
-/*Movie Pages*/
+/* ----------------------------------------------Movie.html Page-------------------------------------------------------------*/
 .moviesContainer1 {
   /*top right bottom left */
   display: flex;
@@ -644,7 +640,6 @@ p {
   padding-top: 50px;
   color: rgb(161, 11, 11);
   background-color: rgb(0, 0, 0);
-  border: 1px solid white;
 }
 .moviesContainer1 h1 {
   order: 1;
@@ -653,7 +648,6 @@ p {
 .movieGallery {
   display: flex;
   flex-flow: row wrap;
-  border: 1px solid white;
   padding: 0px 10px 0px 75px;
 }
 .movieGallery img {
@@ -667,18 +661,42 @@ p {
   cursor: pointer;
   filter: brightness(125%);
 }
-
 .modalMovies {
   position: fixed;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  font-weight: normal;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 70%;
+  width: 50%;
   background-color: white;
   padding: 4rem;
   border-radius: 5px;
   box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
   z-index: 10;
+}
+.movies_modalTitle {
+  margin-bottom: 5px;
+  font-style: italic;
+  text-decoration: underline;
+}
+.movies_modalImages {
+  margin: 30px 0px 0px 0px;
+}
+.movies_modalImages a {
+  text-decoration: none;
+  padding: 5px;
+  background-color: rgba(224, 28, 28, 0.76);
+  border: 1px solid rgba(117, 13, 13, 0.76);
+  color: black;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px black;
+}
+.movies_modalImages a:hover {
+  border: 2px solid black;
+  color: white;
 }
 .overlayMovies {
   position: fixed;
@@ -700,3 +718,8 @@ p {
   border: none;
   background: none;
 }
+.btn_closeMovies:hover {
+  color: black;
+}
+
+/* -----------------------------------------------------END MOVIES.HTML PAGE ----------------------------------------*/

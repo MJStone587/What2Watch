@@ -12,6 +12,8 @@ const posters = document.querySelectorAll(".individual_posters");
 const btnCloseMovies = document.querySelector(".btn_closeMovies");
 const overlayMovies = document.querySelector(".overlayMovies");
 const modalMovies = document.querySelector(".modalMovies");
+const stillsBtn = document.querySelector(".stillsBtn");
+const stillsDiv = document.querySelector(".stills");
 
 /* Populate Container 2 with data from API */
 const populateCont2 = function (data) {
@@ -87,26 +89,32 @@ const populateMovies = (data) => {
     cardArr[i].firstChild.addEventListener(
       "click",
       (event) => (
-        (event.target.onclick = openModalMovies()), putStuffHere(i, data)
+        (event.target.onclick = openModalMovies()), populateMoviesModal(i, data)
       )
     );
   }
 };
 // rename some of these functions and clean shit up
-const putStuffHere = (i, data) => {
+const populateMoviesModal = (i, data) => {
   const modalMoviesTitle = document.querySelector(".movies_modalTitle");
   const modalMoviesReleased = document.querySelector(".movies_modalReleased");
   const modalMoviesRating = document.querySelector(".movies_modalRating");
   const modalMoviesDirector = document.querySelector(".movies_modalDirector");
   const modalMoviesTomato = document.querySelector(".movies_modalTomato");
+  const modalMoviesPlot = document.querySelector(".movies_modalPlot");
+  const stillsBtn = document.querySelector(".stillsBtn");
   modalMoviesTitle.innerHTML = data.movies[i].title;
   modalMoviesReleased.innerHTML = "Released: " + data.movies[i].released;
   modalMoviesDirector.innerHTML = "Director: " + data.movies[i].director;
   modalMoviesTomato.innerHTML = "Tomato Rating: " + data.movies[i].tomato;
   modalMoviesRating.innerHTML = "IMDB Rating: " + data.movies[i].imdb;
+  modalMoviesPlot.innerHTML =
+    "<strong>Plot: </strong>" + data.movies[i].synopsis;
+  stillsBtn.id = i;
 };
+
 // function to close modal on movies.html page when clicking outside modal or on close button
-const clickClose = function () {
+const closeMoviesModal = function () {
   window.addEventListener("click", function (event) {
     if (event.target == overlayMovies || event.target == btnCloseMovies) {
       closeModalMovies();
@@ -115,7 +123,7 @@ const clickClose = function () {
 };
 
 /* populate modal on index.html with data of correlating show/movie */
-const populateModal = (data) => {
+const populateIndexModal = (data) => {
   const btn = document.querySelectorAll(".btn");
   const modalTitle = document.querySelector(".modal_title");
   const modalReleased = document.querySelector(".modal_released");
@@ -138,6 +146,16 @@ const populateModal = (data) => {
   }
 };
 
+// function to populate stills page with images from each movie clicked on movies.html page
+//WIP
+const populateStills = (data) => {
+  let stillsLen = data.movies[i].stills.length;
+  for (let a = 0; a < stillsLen; a++) {
+    const newImg = document.createElement("img");
+    stillsDiv.appendChild(newImg);
+    newImg.src = data.movies[i].stills[a];
+  }
+};
 /* Fetch Data from API */
 const fetchData = function () {
   fetch("./database/movieDB.json")
@@ -148,11 +166,11 @@ const fetchData = function () {
         window.location.href == "http://127.0.0.1:5500/What2Watch/index.html" ||
         window.location.href == "https://mjstone587.github.io/What2Watch/" ||
         window.location.href == "http://127.0.0.1:5500/index.html" ||
-        window.location.href == "http://127.0.0.1:5500"
+        window.location.href == "localhost"
       ) {
         populateCont2(data);
         populateCont3(data);
-        populateModal(data);
+        populateIndexModal(data);
       } else if (
         window.location.href ==
           "http://127.0.0.1:5500/What2Watch/movies.html" ||
@@ -161,7 +179,7 @@ const fetchData = function () {
         window.location.href == "http://127.0.0.1:5500/movies.html"
       ) {
         populateMovies(data);
-        clickClose();
+        closeMoviesModal();
       }
     });
 };
