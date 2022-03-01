@@ -72,18 +72,32 @@ window.addEventListener("click", function (event) {
 /* For movies.html Populate all poster images on display */
 const populateMovies = (data) => {
   const posterContainer = document.querySelector(".movieGallery");
+  const seriesGall = document.querySelector(".seriesGallery");
   const cardArr = [];
+  const seriesArr = [];
   for (let i = 0; i < data.movies.length; i++) {
     // FOR SELF LEARNING - newElement additions must be within the loop scope otherwise only creates one instance instead of multiples
-    const newDiv = document.createElement("div");
-    const newImg = document.createElement("img");
-    posterContainer.append(newDiv);
-    newDiv.classList.add("movieCard");
-    newDiv.append(newImg);
-    cardArr.push(newDiv);
-    const movieCard = document.querySelector(".movieCard");
-    movieCard.id = i;
-    newImg.src = data.movies[i].thumbnail;
+    if (data.movies[i].isMovie === 1) {
+      const newDiv = document.createElement("div");
+      const newImg = document.createElement("img");
+      posterContainer.append(newDiv);
+      newDiv.classList.add("movieCard");
+      newDiv.append(newImg);
+      cardArr.push(newDiv);
+      const movieCard = document.querySelector(".movieCard");
+      movieCard.id = i;
+      newImg.src = data.movies[i].thumbnail;
+    } else {
+      const newDiv = document.createElement("div");
+      const newImg = document.createElement("img");
+      seriesGall.append(newDiv);
+      newDiv.classList.add("seriesCard");
+      newDiv.append(newImg);
+      seriesArr.push(newDiv);
+      const seriesCard = document.querySelector(".seriesCard");
+      seriesCard.id = i;
+      newImg.src = data.movies[i].thumbnail;
+    }
   }
   for (let i = 0; i < cardArr.length; i++) {
     cardArr[i].firstChild.addEventListener(
@@ -91,7 +105,14 @@ const populateMovies = (data) => {
       (event) => (
         (event.target.onclick = openModalMovies()), populateMoviesModal(i, data)
       )
-    );
+    ),
+      seriesArr[i].firstChild.addEventListener(
+        "click",
+        (event) => (
+          (event.target.onclick = openModalMovies()),
+          populateMoviesModal(i, data)
+        )
+      );
   }
 };
 // rename some of these functions and clean shit up
@@ -135,12 +156,19 @@ const populateIndexModal = (data) => {
   trailer.href = data.movies[trailer.id].trailer;
   for (let i = 0; i < btn.length; i++) {
     btn[i].addEventListener("click", () => {
+      const tomatoRating = data.movies[btn[i].id].tomato;
       openModal();
       modalTitle.innerHTML = data.movies[btn[i].id].title;
       modalReleased.innerHTML = "Released: " + data.movies[btn[i].id].released;
       modalDirector.innerHTML = "Director: " + data.movies[btn[i].id].director;
-      modalTomato.innerHTML = "Tomato Rating: " + data.movies[btn[i].id].tomato;
-      modalImdb.innerHTML = "IMDB Rating: " + data.movies[btn[i].id].imdb;
+      if (tomatoRating > 50) {
+        modalTomato.innerHTML =
+          "Tomato: " + data.movies[btn[i].id].tomato + "% " + "🍅";
+      } else if (tomatoRating <= 50) {
+        modalTomato.innerHTML =
+          "Tomato: " + data.movies[btn[i].id].tomato + "% " + "🟢";
+      }
+      modalImdb.innerHTML = "IMDB: " + data.movies[btn[i].id].imdb + "⭐ ";
       modalPlot.innerHTML = data.movies[btn[i].id].synopsis;
     });
   }
@@ -163,9 +191,9 @@ const fetchData = function () {
     .then((data) => {
       console.log(data);
       if (
-        window.location.href == "http://127.0.0.1:5500/What2Watch/index.html" ||
+        window.location.href == "http://127.0.0.1:5501/What2Watch/index.html" ||
         window.location.href == "https://mjstone587.github.io/What2Watch/" ||
-        window.location.href == "http://127.0.0.1:5500/index.html" ||
+        window.location.href == "http://127.0.0.1:5501/index.html" ||
         window.location.href ==
           "https://mjstone587.github.io/What2Watch/index.html"
       ) {
@@ -174,10 +202,10 @@ const fetchData = function () {
         populateIndexModal(data);
       } else if (
         window.location.href ==
-          "http://127.0.0.1:5500/What2Watch/movies.html" ||
+          "http://127.0.0.1:5501/What2Watch/movies.html" ||
         window.location.href ==
           "https://mjstone587.github.io/What2Watch/movies.html" ||
-        window.location.href == "http://127.0.0.1:5500/movies.html"
+        window.location.href == "http://127.0.0.1:5501/movies.html"
       ) {
         populateMovies(data);
         closeMoviesModal();

@@ -113,7 +113,7 @@ Name: Mark Johnston
 }
 /* end top navibar */
 
-/* all index page styling */
+/* ---------------------------------------------------------------------------all index page styling------------------------------------------------------------------*/
 .index-page {
   display: flex;
   flex-flow: column nowrap;
@@ -582,7 +582,7 @@ footer h3 {
 }
 /* End Footer Styling */
 
-/*Modal*/
+/*-------------------------------------------------------Modal----------------------------------------------------------*/
 .overlay {
   position: fixed;
   top: 0;
@@ -608,6 +608,8 @@ footer h3 {
 }
 .modal {
   position: fixed;
+  display: flex;
+  flex-flow: column nowrap;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -617,8 +619,57 @@ footer h3 {
   border-radius: 5px;
   box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
   z-index: 10;
+  border-top: 20px solid rgb(43, 43, 43);
+  border-bottom: 20px solid rgb(43, 43, 43);
 }
-.modal h1 {
+.modal_row1 {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  order: 1;
+}
+.modal_title {
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.692);
+}
+.modal_row2 {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  order: 2;
+  width: 100%;
+  font-size: 15px;
+}
+.modal_imdb {
+  margin: 0px 20px 0px 0px;
+}
+.modal_row3 {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  margin: 10px 0px 0px 0px;
+  order: 3;
+  width: 100%;
+  font-size: 20px;
+}
+.modal_row4 {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  margin: 0px 0px 0px 0px;
+  order: 4;
+  width: 100%;
+  font-size: 20px;
+}
+.modal_row5 {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  padding: 0px 60px 0px 60px;
+  order: 5;
+  width: 100%;
+  font-size: 18px;
+}
+.modal_title {
   color: black;
   padding-top: 5px;
   text-decoration: underline;
@@ -636,24 +687,50 @@ p {
 .moviesContainer1 {
   /*top right bottom left */
   display: flex;
-  flex-flow: column-reverse wrap;
-  justify-content: flex-end;
+  flex-flow: column nowrap;
   padding-top: 50px;
   color: rgb(161, 11, 11);
   background-color: rgb(0, 0, 0);
   height: 99vh;
 }
-.moviesContainer1 h1 {
+.movieContainer1_title {
   order: 1;
-  padding-bottom: 5px;
-  padding-left: 10px;
 }
-.movieGallery {
+.movieContainer1_title2 {
+  margin: 50px 0px 0px 0px;
+  order: 3;
+}
+.moviesContainer1 h1 {
+  margin: 25px 0px 10px 75px;
+}
+.seriesGallery {
+  order: 4;
   display: flex;
   flex-flow: row wrap;
-  padding: 0px 10px 0px 75px;
+  margin: 0px 10px 0px 75px;
   overflow: scroll;
   max-height: 99vh;
+  background-color: black;
+}
+.seriesGallery img {
+  height: 22vh;
+  width: 17vw;
+}
+.seriesCard {
+  margin: 2px;
+}
+.seriesCard:hover {
+  cursor: pointer;
+  filter: brightness(125%);
+}
+.movieGallery {
+  order: 2;
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0px 10px 0px 75px;
+  overflow: scroll;
+  max-height: 99vh;
+  background-color: black;
 }
 .movieGallery img {
   height: 22vh;
