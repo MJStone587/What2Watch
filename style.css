@@ -637,18 +637,23 @@ p {
   /*top right bottom left */
   display: flex;
   flex-flow: column-reverse wrap;
+  justify-content: flex-end;
   padding-top: 50px;
   color: rgb(161, 11, 11);
   background-color: rgb(0, 0, 0);
+  height: 99vh;
 }
 .moviesContainer1 h1 {
   order: 1;
   padding-bottom: 5px;
+  padding-left: 10px;
 }
 .movieGallery {
   display: flex;
   flex-flow: row wrap;
   padding: 0px 10px 0px 75px;
+  overflow: scroll;
+  max-height: 99vh;
 }
 .movieGallery img {
   height: 22vh;

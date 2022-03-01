@@ -166,7 +166,8 @@ const fetchData = function () {
         window.location.href == "http://127.0.0.1:5500/What2Watch/index.html" ||
         window.location.href == "https://mjstone587.github.io/What2Watch/" ||
         window.location.href == "http://127.0.0.1:5500/index.html" ||
-        window.location.href == "localhost"
+        window.location.href ==
+          "https://mjstone587.github.io/What2Watch/index.html"
       ) {
         populateCont2(data);
         populateCont3(data);
