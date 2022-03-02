@@ -71,7 +71,7 @@ window.addEventListener("click", function (event) {
 });
 /* For movies.html Populate all poster images on display */
 const populateMovies = (data) => {
-  const posterContainer = document.querySelector(".movieGallery");
+  const posterContainer = document.querySelector(".moviesGallery");
   const seriesGall = document.querySelector(".seriesGallery");
   const cardArr = [];
   const seriesArr = [];
@@ -105,14 +105,15 @@ const populateMovies = (data) => {
       (event) => (
         (event.target.onclick = openModalMovies()), populateMoviesModal(i, data)
       )
-    ),
-      seriesArr[i].firstChild.addEventListener(
-        "click",
-        (event) => (
-          (event.target.onclick = openModalMovies()),
-          populateMoviesModal(i, data)
-        )
-      );
+    );
+  }
+  for (let i = 0; i < seriesArr.length; i++) {
+    seriesArr[i].firstChild.addEventListener(
+      "click",
+      (event) => (
+        (event.target.onclick = openModalMovies()), populateMoviesModal(i, data)
+      )
+    );
   }
 };
 // rename some of these functions and clean shit up
@@ -127,8 +128,15 @@ const populateMoviesModal = (i, data) => {
   modalMoviesTitle.innerHTML = data.movies[i].title;
   modalMoviesReleased.innerHTML = "Released: " + data.movies[i].released;
   modalMoviesDirector.innerHTML = "Director: " + data.movies[i].director;
-  modalMoviesTomato.innerHTML = "Tomato Rating: " + data.movies[i].tomato;
-  modalMoviesRating.innerHTML = "IMDB Rating: " + data.movies[i].imdb;
+  const tomatoRating = data.movies[i].tomato;
+  if (tomatoRating > 50) {
+    modalMoviesTomato.innerHTML =
+      "Tomato: " + data.movies[i].tomato + "% " + "🍅";
+  } else if (tomatoRating <= 50) {
+    modalMoviesTomato.innerHTML =
+      "Tomato: " + data.movies[i].tomato + "% " + "🟢";
+  }
+  modalMoviesRating.innerHTML = "IMDB Rating: " + data.movies[i].imdb + "⭐";
   modalMoviesPlot.innerHTML =
     "<strong>Plot: </strong>" + data.movies[i].synopsis;
   stillsBtn.id = i;
@@ -213,3 +221,34 @@ const fetchData = function () {
     });
 };
 fetchData();
+
+// function to display or hide current tab of movies or series on movies.html
+const moviesTab = document.querySelector(".moviesContainer1_moviesTab");
+const seriesTab = document.querySelector(".moviesContainer1_seriesTab");
+const seriesGallery = document.querySelector(".seriesGallery");
+const moviesGallery = document.querySelector(".moviesGallery");
+
+moviesTab.addEventListener("click", function () {
+  seriesTab.style.color = "rgb(143, 10, 10)";
+  moviesTab.style.color = "red";
+  moviesTab.style.borderTop = "1px solid red";
+  moviesTab.style.borderLeft = "1px solid red";
+  moviesTab.style.borderRight = "1px solid red";
+  seriesTab.style.borderLeft = "1px solid rgb(143, 10, 10)";
+  seriesTab.style.borderRight = "1px solid rgb(143, 10, 10)";
+  seriesTab.style.borderTop = "1px solid rgb(143, 10, 10)";
+  seriesGallery.style.display = "none";
+  moviesGallery.style.display = "flex";
+});
+seriesTab.addEventListener("click", function () {
+  seriesTab.style.color = "red";
+  moviesTab.style.color = "rgb(143, 10, 10)";
+  seriesTab.style.borderLeft = "1px solid red";
+  seriesTab.style.borderRight = "1px solid red";
+  seriesTab.style.borderTop = "1px solid red";
+  moviesTab.style.borderTop = "1px solid rgb(143, 10, 10)";
+  moviesTab.style.borderLeft = "1px solid rgb(143, 10, 10)";
+  moviesTab.style.borderRight = "1px solid rgb(143, 10, 10)";
+  moviesGallery.style.display = "none";
+  seriesGallery.style.display = "flex";
+});

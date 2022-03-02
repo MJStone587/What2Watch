@@ -239,7 +239,6 @@ Name: Mark Johnston
 .container2-right input {
   margin-top: 20px;
   background-color: black;
-  font: white;
 }
 .container2-right h1 {
   color: white;
@@ -629,7 +628,7 @@ footer h3 {
   order: 1;
 }
 .modal_title {
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.692);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.692);
 }
 .modal_row2 {
   display: flex;
@@ -693,21 +692,47 @@ p {
   background-color: rgb(0, 0, 0);
   height: 99vh;
 }
-.movieContainer1_title {
-  order: 1;
+.movie_tabs {
+  display: flex;
+  flex-flow: row nowrap;
+  border-bottom: 1px solid rgb(143, 10, 10);
 }
-.movieContainer1_title2 {
-  margin: 50px 0px 0px 0px;
-  order: 3;
+.moviesContainer1_seriesTab {
+  margin: 5px 5px 0px 5px;
+  border-top: 1px solid rgb(143, 10, 10);
+  border-right: 1px solid rgb(143, 10, 10);
+  border-left: 1px solid rgb(143, 10, 10);
+  padding: 5px 5px 0px 5px;
+  font-size: 30px;
+  font-weight: bold;
 }
-.moviesContainer1 h1 {
-  margin: 25px 0px 10px 75px;
+.moviesContainer1_moviesTab {
+  border-top: 1px solid red;
+  border-right: 1px solid red;
+  border-left: 1px solid red;
+  font-size: 30px;
+  font-weight: bold;
+  color: red;
+  margin: 5px 5px 0px 5px;
+  padding: 5px 5px 0px 5px;
+}
+.moviesContainer1_moviesTab:hover {
+  cursor: pointer;
+  border-top: 2px solid red;
+  border-right: 2px solid red;
+  border-left: 2px solid red;
+}
+.moviesContainer1_seriesTab:hover {
+  cursor: pointer;
+  border-top: 1px solid red;
+  border-right: 1px solid red;
+  border-left: 1px solid red;
 }
 .seriesGallery {
+  display: none;
   order: 4;
-  display: flex;
   flex-flow: row wrap;
-  margin: 0px 10px 0px 75px;
+  margin: 10px 10px 0px 75px;
   overflow: scroll;
   max-height: 99vh;
   background-color: black;
@@ -723,16 +748,16 @@ p {
   cursor: pointer;
   filter: brightness(125%);
 }
-.movieGallery {
+.moviesGallery {
   order: 2;
   display: flex;
   flex-flow: row wrap;
-  margin: 0px 10px 0px 75px;
+  margin: 10px 10px 0px 75px;
   overflow: scroll;
   max-height: 99vh;
   background-color: black;
 }
-.movieGallery img {
+.moviesGallery img {
   height: 22vh;
   width: 17vw;
 }

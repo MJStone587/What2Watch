@@ -244,6 +244,34 @@
         "https://i0.wp.com/caps.pictures/199/9-fightclub/full/fight-club-movie-screencaps.com-4058.jpg",
         "https://i3.wp.com/caps.pictures/199/9-fightclub/full/fight-club-movie-screencaps.com-4972.jpg"
       ]
+    },
+    {
+      "id": 9,
+      "title": "The King's Man",
+      "genre": ["Action", "Comedy"],
+      "isMovie": 1,
+      "released": "2021",
+      "director": "Matthew Vaughn",
+      "tomato": 42,
+      "imdb": "6.4",
+      "synopsis": "One man must race against time to stop history's worst tyrants and criminal masterminds as they get together to plot a war that could wipe out millions of people and destroy humanity.",
+      "trailer": "https://www.youtube.com/watch?v=5zdBG-iGfes",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMDEzZDY2ZDktNTlmOS00NThjLThkNTEtMjE5MzI5NWEwZmRjXkEyXkFqcGdeQXVyMDA4NzMyOA@@._V1_.jpg",
+      "thumbnail": "https://see.news/wp-content/uploads/2022/01/main-ail-61a507ca358256.61567349.jpg",
+      "cast": [
+        "Gemma Arterton",
+        "Ralph Fiennes",
+        "Harrison Dickinson",
+        "Rhys Ifans",
+        "Stanley Tucci"
+      ],
+      "stills": [
+        "https://i1.wp.com/caps.pictures/199/9-fightclub/full/fight-club-movie-screencaps.com-138.jpg",
+        "https://i0.wp.com/caps.pictures/199/9-fightclub/full/fight-club-movie-screencaps.com-256.jpg",
+        "https://i0.wp.com/caps.pictures/199/9-fightclub/full/fight-club-movie-screencaps.com-1597.jpg",
+        "https://i0.wp.com/caps.pictures/199/9-fightclub/full/fight-club-movie-screencaps.com-4058.jpg",
+        "https://i3.wp.com/caps.pictures/199/9-fightclub/full/fight-club-movie-screencaps.com-4972.jpg"
+      ]
     }
   ]
 }
