@@ -71,53 +71,49 @@ window.addEventListener("click", function (event) {
 });
 /* For movies.html Populate all poster images on display */
 const populateMovies = (data) => {
-  const posterContainer = document.querySelector(".moviesGallery");
+  const moviesGall = document.querySelector(".moviesGallery");
   const seriesGall = document.querySelector(".seriesGallery");
   const cardArr = [];
   const seriesArr = [];
-  for (let i = 0; i < data.movies.length; i++) {
+  for (let x = 0; x < data.movies.length; x++) {
     // FOR SELF LEARNING - newElement additions must be within the loop scope otherwise only creates one instance instead of multiples
-    if (data.movies[i].isMovie === 1) {
-      const newDiv = document.createElement("div");
+    if (data.movies[x].isMovie === 1) {
       const newImg = document.createElement("img");
-      posterContainer.append(newDiv);
-      newDiv.classList.add("movieCard");
-      newDiv.append(newImg);
-      cardArr.push(newDiv);
-      const movieCard = document.querySelector(".movieCard");
-      movieCard.id = i;
-      newImg.src = data.movies[i].thumbnail;
+      newImg.classList.add("movieCard");
+      moviesGall.append(newImg);
+      newImg.id = data.movies[x].title;
+      cardArr.push(newImg);
+      newImg.src = data.movies[x].thumbnail;
     } else {
-      const newDiv = document.createElement("div");
       const newImg = document.createElement("img");
-      seriesGall.append(newDiv);
-      newDiv.classList.add("seriesCard");
-      newDiv.append(newImg);
-      seriesArr.push(newDiv);
-      const seriesCard = document.querySelector(".seriesCard");
-      seriesCard.id = i;
-      newImg.src = data.movies[i].thumbnail;
+      seriesGall.append(newImg);
+      newImg.classList.add("seriesCard");
+      newImg.id = data.movies[x].title;
+      seriesArr.push(newImg);
+      newImg.src = data.movies[x].thumbnail;
     }
   }
   for (let i = 0; i < cardArr.length; i++) {
-    cardArr[i].firstChild.addEventListener(
+    cardArr[i].addEventListener(
       "click",
       (event) => (
-        (event.target.onclick = openModalMovies()), populateMoviesModal(i, data)
+        (event.target.onclick = openModalMovies()),
+        populateMoviesModal(cardArr[i].id, data)
       )
     );
   }
   for (let i = 0; i < seriesArr.length; i++) {
-    seriesArr[i].firstChild.addEventListener(
+    seriesArr[i].addEventListener(
       "click",
       (event) => (
-        (event.target.onclick = openModalMovies()), populateMoviesModal(i, data)
+        (event.target.onclick = openModalMovies()),
+        populateMoviesModal(seriesArr[i].id, data)
       )
     );
   }
 };
-// rename some of these functions and clean shit up
-const populateMoviesModal = (i, data) => {
+
+const populateMoviesModal = (id, data) => {
   const modalMoviesTitle = document.querySelector(".movies_modalTitle");
   const modalMoviesReleased = document.querySelector(".movies_modalReleased");
   const modalMoviesRating = document.querySelector(".movies_modalRating");
@@ -125,21 +121,27 @@ const populateMoviesModal = (i, data) => {
   const modalMoviesTomato = document.querySelector(".movies_modalTomato");
   const modalMoviesPlot = document.querySelector(".movies_modalPlot");
   const stillsBtn = document.querySelector(".stillsBtn");
-  modalMoviesTitle.innerHTML = data.movies[i].title;
-  modalMoviesReleased.innerHTML = "Released: " + data.movies[i].released;
-  modalMoviesDirector.innerHTML = "Director: " + data.movies[i].director;
-  const tomatoRating = data.movies[i].tomato;
-  if (tomatoRating > 50) {
-    modalMoviesTomato.innerHTML =
-      "Tomato: " + data.movies[i].tomato + "% " + "🍅";
-  } else if (tomatoRating <= 50) {
-    modalMoviesTomato.innerHTML =
-      "Tomato: " + data.movies[i].tomato + "% " + "🟢";
+  // can use the find() function or filter() for IE browser to produce same results as below
+  for (var i = 0, numMovies = data.movies.length; i < numMovies; i++) {
+    if (data.movies[i].title == id) {
+      modalMoviesTitle.innerHTML = id;
+      modalMoviesReleased.innerHTML = "Released: " + data.movies[i].released;
+      modalMoviesDirector.innerHTML = "Director: " + data.movies[i].director;
+      const tomatoRating = data.movies[i].tomato;
+      if (tomatoRating > 50) {
+        modalMoviesTomato.innerHTML =
+          "Tomato: " + data.movies[i].tomato + "% " + "🍅";
+      } else if (tomatoRating <= 50) {
+        modalMoviesTomato.innerHTML =
+          "Tomato: " + data.movies[i].tomato + "% " + "🟢";
+      }
+      modalMoviesRating.innerHTML =
+        "IMDB Rating: " + data.movies[i].imdb + "⭐";
+      modalMoviesPlot.innerHTML =
+        "<strong>Plot: </strong>" + data.movies[i].synopsis;
+      //POPULATE STILLS PAGE HERE IN FUTURE
+    }
   }
-  modalMoviesRating.innerHTML = "IMDB Rating: " + data.movies[i].imdb + "⭐";
-  modalMoviesPlot.innerHTML =
-    "<strong>Plot: </strong>" + data.movies[i].synopsis;
-  stillsBtn.id = i;
 };
 
 // function to close modal on movies.html page when clicking outside modal or on close button
@@ -197,7 +199,6 @@ const fetchData = function () {
   fetch("./database/movieDB.json")
     .then((response) => response.json())
     .then((data) => {
-      console.log(data);
       if (
         window.location.href == "http://127.0.0.1:5501/What2Watch/index.html" ||
         window.location.href == "https://mjstone587.github.io/What2Watch/" ||
