@@ -14,6 +14,10 @@ const overlayMovies = document.querySelector(".overlayMovies");
 const modalMovies = document.querySelector(".modalMovies");
 const stillsBtn = document.querySelector(".stillsBtn");
 const stillsDiv = document.querySelector(".stills");
+document.cookie = "username=unknown";
+let x = document.cookie;
+
+console.log(x);
 
 /* Populate Container 2 with data from API */
 const populateCont2 = function (data) {
@@ -229,27 +233,32 @@ const seriesTab = document.querySelector(".moviesContainer1_seriesTab");
 const seriesGallery = document.querySelector(".seriesGallery");
 const moviesGallery = document.querySelector(".moviesGallery");
 
-moviesTab.addEventListener("click", function () {
-  seriesTab.style.color = "rgb(143, 10, 10)";
-  moviesTab.style.color = "red";
-  moviesTab.style.borderTop = "1px solid red";
-  moviesTab.style.borderLeft = "1px solid red";
-  moviesTab.style.borderRight = "1px solid red";
-  seriesTab.style.borderLeft = "1px solid rgb(143, 10, 10)";
-  seriesTab.style.borderRight = "1px solid rgb(143, 10, 10)";
-  seriesTab.style.borderTop = "1px solid rgb(143, 10, 10)";
-  seriesGallery.style.display = "none";
-  moviesGallery.style.display = "flex";
-});
-seriesTab.addEventListener("click", function () {
-  seriesTab.style.color = "red";
-  moviesTab.style.color = "rgb(143, 10, 10)";
-  seriesTab.style.borderLeft = "1px solid red";
-  seriesTab.style.borderRight = "1px solid red";
-  seriesTab.style.borderTop = "1px solid red";
-  moviesTab.style.borderTop = "1px solid rgb(143, 10, 10)";
-  moviesTab.style.borderLeft = "1px solid rgb(143, 10, 10)";
-  moviesTab.style.borderRight = "1px solid rgb(143, 10, 10)";
-  moviesGallery.style.display = "none";
-  seriesGallery.style.display = "flex";
-});
+if (
+  window.location.href === "http://127.0.0.1:5501/movies.html" ||
+  window.location.href === "https://mjstone587.github.io/What2Watch/movies.html"
+) {
+  moviesTab.addEventListener("click", function () {
+    seriesTab.style.color = "rgb(143, 10, 10)";
+    moviesTab.style.color = "red";
+    moviesTab.style.borderTop = "1px solid red";
+    moviesTab.style.borderLeft = "1px solid red";
+    moviesTab.style.borderRight = "1px solid red";
+    seriesTab.style.borderLeft = "1px solid rgb(143, 10, 10)";
+    seriesTab.style.borderRight = "1px solid rgb(143, 10, 10)";
+    seriesTab.style.borderTop = "1px solid rgb(143, 10, 10)";
+    seriesGallery.style.display = "none";
+    moviesGallery.style.display = "flex";
+  });
+  seriesTab.addEventListener("click", function () {
+    seriesTab.style.color = "red";
+    moviesTab.style.color = "rgb(143, 10, 10)";
+    seriesTab.style.borderLeft = "1px solid red";
+    seriesTab.style.borderRight = "1px solid red";
+    seriesTab.style.borderTop = "1px solid red";
+    moviesTab.style.borderTop = "1px solid rgb(143, 10, 10)";
+    moviesTab.style.borderLeft = "1px solid rgb(143, 10, 10)";
+    moviesTab.style.borderRight = "1px solid rgb(143, 10, 10)";
+    moviesGallery.style.display = "none";
+    seriesGallery.style.display = "flex";
+  });
+}
