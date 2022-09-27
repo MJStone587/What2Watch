@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!-- Mark Johnston PHP Final Project HTML FILE-->
-
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link type="text/css" rel="Stylesheet" href="reset.css" />
     <link type="text/css" rel="Stylesheet" href="style.css" />
     <title>What 2 Watch</title>
   </head>
+
   <!-- Top Navibar -->
-  <div class="top-navibar">
+  <nav class="top-navibar">
     <div class="top-navibar left-side">
       <a href="index.html" id="home_bt">Home</a>
       <a href="movies.html" id="login_bt">Browse</a>
     </div>
-    <div class="top-navibar empty-middle"></div>
     <div class="top-navibar right-side">
       <a id="search">🔍</a>
       <a id="reminder">🔔</a>
       <a id="user-icon">&#xf2bd;</a>
       <a id="down-arrow">&#9663;</a>
     </div>
-  </div>
+  </nav>
+
   <!-- Header and Navibar below header-->
   <header>
     <div class="title">
@@ -31,23 +31,23 @@
     </div>
   </header>
 
-  <div class="navibar">
+  <nav class="navibar">
     <div class="nav-content">
-      <a href="index.php" id="btn_1">MOVIE REVIEWS</a>
-      <a href="user_registration.php" id="btn_2">SERIES REVIEWS</a>
-      <a href="user_login.php" id="btn_3">EXPLORE MORE</a>
+      <a href="index.html" id="btn_1">MOVIE REVIEWS</a>
+      <a href="#" id="btn_2">SERIES REVIEWS</a>
+      <a href="movies.html" id="btn_3">EXPLORE MORE</a>
     </div>
-  </div>
+  </nav>
 
   <!-- Page Body -->
-  <div class="index-page">
-    <!-- First Container with intro text for Movie Picks -->
+  <main class="index-page">
+    <!-- Container 1: Featured Text  -->
     <div class="container1">
       <h3>FEATURED</h3>
       <p><strong>Top</strong> Picks</p>
     </div>
 
-    <!-- Second Container with Movie Poster display/brief data/ more button -->
+    <!-- Container 2: Multiple movie showcase-->
     <div class="container2">
       <div class="container2-left">
         <div class="individual_posters poster1">
@@ -80,6 +80,7 @@
         </div>
       </div>
 
+      <!-- Container 2: Side Panel-->
       <div class="container2-right">
         <h1>More...</h1>
         <a href="movies.html"
@@ -89,9 +90,8 @@
         <input type="text" placeholder="🔍Search..." name="search" />
       </div>
     </div>
-    <!--END OF CONTAINER 2-->
 
-    <!-- Container 3: Contains Poster with brief data and trailer link/ more button-->
+    <!-- Container 3: Movie Spotlight Containter-->
     <div class="container3">
       <div class="container3-left">
         <img class="cont3-img" src="" alt="Movie Poster" />
@@ -104,9 +104,8 @@
         <button class="btn btn_viewMore">View More</button>
       </div>
     </div>
-    <!--END OF CONTAINER 3-->
 
-    <!--Container 4-->
+    <!-- Container 4: Showtime Display-->
     <div class="container4">
       <div class="container4-left">
         <h3>ALL SHOWTIMES</h3>
@@ -119,11 +118,13 @@
       <div class="container4-right">
         <div class="display-box">
           <h2>Title</h2>
-          <p>Movie Released</p>
+          <p>Annihilation: Run Time-2hr 30m</p>
+          <p>Annihilation: Run Time-2hr 30m</p>
+          <p>Annihilation: Run Time-2hr 30m</p>
+          <p>Annihilation: Run Time-2hr 30m</p>
         </div>
       </div>
     </div>
-    <!--END OF CONTAINER 4-->
 
     <!-- Modal and overlay -->
     <div class="overlay hidden">
@@ -140,7 +141,7 @@
       </div>
     </div>
     <!--   End Modal     -->
-  </div>
+  </main>
   <!--END OF BODY OF PAGE-->
 
   <footer>

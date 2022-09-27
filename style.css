@@ -5,10 +5,12 @@ Name: Mark Johnston
 @import url("https://fonts.googleapis.com/css2?family=Assistant&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Staatliches&display=swap");
 
-* {
+html {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  width: 100%;
+  background-color: black;
 }
 /*header styling */
 .title {
@@ -57,6 +59,7 @@ Name: Mark Johnston
   flex-flow: row nowrap;
   justify-content: flex-start;
   background-color: #000000;
+  width: 100%;
 }
 .nav-content {
   flex: 1;
@@ -89,13 +92,12 @@ Name: Mark Johnston
   justify-content: space-between;
   align-items: center;
   align-content: center;
-  height: 2.75vw;
+  height: 60px;
   background-color: rgb(19, 19, 19);
 }
-.empty-middle {
-  width: calc(100vh - 50px);
-}
 .left-side {
+  display: flex;
+  justify-content: space-evenly;
   margin-left: 4rem;
 }
 .right-side a {
@@ -106,7 +108,7 @@ Name: Mark Johnston
 .left-side a {
   color: rgb(122, 122, 122);
   text-decoration: none;
-  margin-right: 1rem;
+  margin: 1.5rem;
 }
 .left-side a:hover {
   color: rgb(255, 255, 255);
@@ -117,7 +119,6 @@ Name: Mark Johnston
 .index-page {
   display: flex;
   flex-flow: column nowrap;
-  min-height: 100vh;
   width: 100%;
   background-color: black;
 }
@@ -126,19 +127,18 @@ Name: Mark Johnston
   display: flex;
   flex-flow: column nowrap;
   background-color: #000000;
-  padding-top: 100px;
-  padding-left: 50px;
 }
 .container1 h3 {
-  margin-top: 30px;
-  margin-left: 100px;
+  margin-top: 6rem;
+  margin-left: 8rem;
   font-size: 20px;
   color: rgb(155, 29, 29);
 }
 .container1 p {
   font-family: "Bellota Text", cursive;
   margin-left: 7.5rem;
-  font-size: 5.6vw;
+  padding: 25px;
+  font-size: 4rem;
   color: white;
 }
 .container1 strong {
@@ -329,12 +329,13 @@ Name: Mark Johnston
   order: 4;
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-evenly;
   background-color: black;
   padding-top: 100px;
 }
 .container4-left {
   order: 1;
+  display: flex;
+  flex-flow: column nowrap;
   /* top right bottom left */
   margin: 175px 40px 0px 100px;
   color: white;
@@ -356,6 +357,11 @@ Name: Mark Johnston
 }
 .container4-right {
   background-image: url("images/blurredLights.jpg");
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
   flex-grow: 2;
   height: 80vh;
   width: 125vh;
@@ -363,14 +369,14 @@ Name: Mark Johnston
   margin-left: 50px;
 }
 .display-box {
+  display: flex;
+  flex-flow: column nowrap;
   background-color: black;
   color: white;
   border: 3px solid rgb(2, 2, 138);
   /* top right bottom left */
   width: 60%;
   height: 420px;
-  margin: 100px 150px 0px 0px;
-  padding: 50px 50px 50px 10px;
 }
 .display-box h2 {
   font-size: 1.7em;
@@ -537,6 +543,11 @@ Name: Mark Johnston
   min-height: calc(100vh - 120px);
 }
 /*--------------------------------------------------------------END ADMIN PAGE----------------------------------------------------*/
+/* STILL PAGE */
+.stillsBody {
+  margin: 0;
+}
+/*--------------------------------------------------------------END STILL PAGE--------------------------------------------------- */
 /* footer styling */
 footer {
   display: flex;
@@ -544,10 +555,9 @@ footer {
   justify-content: space-evenly;
   align-items: baseline;
   align-content: center;
-  height: 275px;
+  height: 20vh;
   background-image: url("images/footerpic1.jpg  ");
   background-size: cover;
-  width: 100%;
   background-repeat: no-repeat;
   color: rgb(255, 255, 255);
   padding-top: 100px;
@@ -683,6 +693,10 @@ p {
 }
 
 /* ----------------------------------------------Movie.html Page-------------------------------------------------------------*/
+
+.moviesBodyContainer {
+  height: 95vh;
+}
 .moviesContainer1 {
   /*top right bottom left */
   display: flex;
@@ -733,7 +747,9 @@ p {
   order: 4;
   flex-flow: row wrap;
   margin: 10px 10px 0px 75px;
-  overflow: scroll;
+  overflow: hidden;
+  height: 90vh;
+  align-content: start;
   max-height: 99vh;
   background-color: black;
 }
@@ -752,8 +768,10 @@ p {
   order: 2;
   display: flex;
   flex-flow: row wrap;
+  align-content: start;
+  overflow: hidden;
   margin: 10px 10px 0px 75px;
-  overflow: scroll;
+  height: 90vh;
   max-height: 99vh;
   background-color: black;
 }

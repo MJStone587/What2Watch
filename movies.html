@@ -1,52 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!-- Mark Johnston PHP Final Project HTML FILE-->
-
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link type="text/css" rel="Stylesheet" href="reset.css" />
     <link type="text/css" rel="Stylesheet" href="style.css" />
     <link type="favicon" rel="icon/favicon" />
     <title>What2Watch Movies</title>
   </head>
 
-  <div class="top-navibar">
+  <nav class="top-navibar">
     <div class="top-navibar left-side">
       <a href="index.html" type="button" id="home_bt">Home</a>
       <a href="movies.html" type="button" id="login_bt">Movies</a>
     </div>
-    <div class="top-navibar empty-middle"></div>
+
     <div class="top-navibar right-side">
       <a type="button" id="search">🔍</a>
       <a type="button" id="reminder">🔔</a>
       <a type="button" id="user-icon">&#xf2bd;</a>
       <a type="button" id="down-arrow">&#9663;</a>
     </div>
-  </div>
+  </nav>
 
-  <div class="moviesContainer1">
-    <div class="movie_tabs">
-      <a class="moviesContainer1_moviesTab">Movies</a>
-      <a class="moviesContainer1_seriesTab">Series</a>
+  <main class="moviesBodyContainer">
+    <div class="moviesContainer1">
+      <div class="movie_tabs">
+        <a class="moviesContainer1_moviesTab">Movies</a>
+        <a class="moviesContainer1_seriesTab">Series</a>
+      </div>
+      <div class="moviesGallery"></div>
+      <div class="seriesGallery"></div>
     </div>
-    <div class="moviesGallery"></div>
-    <div class="seriesGallery"></div>
-  </div>
 
-  <div class="overlayMovies hidden">
-    <div class="modalMovies hidden">
-      <div class="btn_closeMovies">&times;</div>
-      <h1 class="movies_modalTitle">Title</h1>
-      <h3 class="movies_modalReleased">Released</h3>
-      <h3 class="movies_modalDirector">Director:</h3>
-      <h3 class="movies_modalRating">IMBD:</h3>
-      <h3 class="movies_modalTomato">Tomato Rating:</h3>
-      <p class="movies_modalPlot"></p>
-      <div class="movies_modalImages">
-        <a href="stills.html" class="stillsBtn">>>Movie Stills<<</a>
+    <div class="overlayMovies hidden">
+      <div class="modalMovies hidden">
+        <div class="btn_closeMovies">&times;</div>
+        <h1 class="movies_modalTitle">Title</h1>
+        <h3 class="movies_modalReleased">Released</h3>
+        <h3 class="movies_modalDirector">Director:</h3>
+        <h3 class="movies_modalRating">IMBD:</h3>
+        <h3 class="movies_modalTomato">Tomato Rating:</h3>
+        <p class="movies_modalPlot"></p>
+        <div class="movies_modalImages">
+          <a href="stills.html" class="stillsBtn">>>Movie Stills<<</a>
+        </div>
       </div>
     </div>
-  </div>
+  </main>
 
   <footer>
     <div class="footer-left">
