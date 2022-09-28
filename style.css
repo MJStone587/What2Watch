@@ -29,12 +29,12 @@ html {
   font-family: "Staatliches", cursive;
   margin-left: 6.75rem;
   color: white;
-  letter-spacing: 0.3rem;
-  font-size: 10vw;
+  letter-spacing: 4px;
+  font-size: 12rem;
 }
 .title p {
-  margin-left: 6.75rem;
-  font-size: 1.8vw;
+  margin-left: 6.8rem;
+  font-size: 2rem;
   color: white;
 }
 .title button {
@@ -70,12 +70,12 @@ html {
 .nav-content a {
   color: white;
   flex-basis: content;
-  font-size: 1.25vw;
+  font-size: 1.25rem;
   text-decoration: none;
   border: 1px solid rgba(201, 17, 17, 0.685);
-  border-radius: 0.2rem;
-  letter-spacing: 0.05rem;
-  padding: 5px 20px 5px 20px;
+  border-radius: 5px;
+  letter-spacing: 2px;
+  padding: 0.5rem 1.25rem 0.5rem 1.25rem;
   box-sizing: border-box;
   font-family: "Assistant", sans-serif;
 }
@@ -92,7 +92,7 @@ html {
   justify-content: space-between;
   align-items: center;
   align-content: center;
-  height: 60px;
+  height: 50px;
   background-color: rgb(19, 19, 19);
 }
 .left-side {
@@ -131,7 +131,7 @@ html {
 .container1 h3 {
   margin-top: 6rem;
   margin-left: 8rem;
-  font-size: 20px;
+  font-size: 1.5rem;
   color: rgb(155, 29, 29);
 }
 .container1 p {
@@ -150,8 +150,8 @@ html {
   flex-flow: row nowrap;
   max-height: calc(100vh - 120px);
   background-color: rgb(0, 0, 0);
-  padding-left: 50px;
-  padding-top: 20px;
+  padding-left: 4rem;
+  padding-top: 1.15rem;
 }
 .container2 button:hover {
   cursor: pointer;
@@ -162,7 +162,7 @@ html {
   order: 1;
   flex: 2;
   padding: 0;
-  margin-left: 100px;
+  margin-left: 9rem;
 }
 .container2-left img {
   height: 48vh;
@@ -170,28 +170,28 @@ html {
 }
 .container2-left h1 {
   color: white;
-  font-size: 20px;
+  font-size: 1.15rem;
   font-weight: bold;
-  margin-top: 10px;
+  margin-top: 0.75rem;
 }
 .container2-left h2 {
   color: rgba(255, 255, 255, 0.589);
-  font-size: 15px;
+  font-size: 1rem;
   font-weight: normal;
-  margin-top: 5px;
+  margin-top: 0.5rem;
 }
 .container2-left h3 {
   color: rgba(255, 255, 255, 0.589);
-  font-size: 15px;
+  font-size: 1rem;
   font-weight: normal;
-  margin-top: 5px;
+  margin-top: 0.5rem;
 }
 .container2-left button {
   color: white;
   background-color: black;
   border: 1px solid rgb(143, 10, 10);
   border-radius: 3px;
-  margin-top: 10px;
+  margin-top: 0.75rem;
   width: 15vh;
   cursor: pointer;
   font-size: 0.67em;
@@ -218,31 +218,31 @@ html {
 }
 .container2-right #btn_seeall {
   margin-top: 30px;
-  height: 30px;
-  width: 140px;
+  height: 70%;
+  width: 80%;
   background-color: rgb(58, 58, 58);
   border: 0px;
   color: white;
-  font-size: 0.75em;
+  font-size: 0.75rem;
   border-radius: 2px;
 }
 .container2-right #btn_comingsoon {
-  margin-top: 20px;
-  height: 30px;
-  width: 125px;
+  margin-top: 1.25rem;
+  height: 70%;
+  width: 80%;
   background-color: rgb(58, 58, 58);
   border: 0px;
   color: white;
-  font-size: 0.75em;
+  font-size: 0.75rem;
   border-radius: 2px;
 }
 .container2-right input {
-  margin-top: 20px;
+  margin-top: 1.15rem;
   background-color: black;
 }
 .container2-right h1 {
   color: white;
-  font-size: 1.2em;
+  font-size: 1.2rem;
 }
 .container3 {
   order: 3;
@@ -253,8 +253,8 @@ html {
   background-color: black;
   color: white;
   height: 99vh;
-  margin-top: 250px;
-  padding-left: 120px;
+  margin-top: 10rem;
+  padding-left: 9rem;
 }
 .cont3-img {
   height: 76vh;
@@ -264,18 +264,18 @@ html {
   cursor: pointer;
 }
 .container3-left {
-  padding-right: 40px;
-  padding-left: 20px;
-  margin-right: 100px;
-  margin-left: 100px;
+  padding-right: 3rem;
+  padding-left: 1.15rem;
+  margin-right: 8rem;
+  margin-left: 8rem;
 }
 .container3-right {
   display: flex;
   flex-flow: column nowrap;
-  margin-left: 50px;
-  margin-right: 150px;
-  padding-top: 80px;
-  padding-right: 100px;
+  margin-left: 4rem;
+  margin-right: 10rem;
+  padding-top: 6rem;
+  padding-right: 8rem;
 }
 .container3-right h3 {
   color: rgba(172, 16, 16, 0.863);
@@ -295,12 +295,12 @@ html {
   font-size: 18px;
 }
 .btn_trailer {
-  width: 200px;
-  height: 50px;
+  width: 35%;
   background-color: red;
   color: white;
-  font-size: 18px;
-  padding-top: 12px;
+  font-size: 1.1rem;
+  padding-top: 0.9rem;
+  padding-bottom: 0.9rem;
   border: 1px solid red;
   border-radius: 2px;
   text-decoration: none;
@@ -311,12 +311,12 @@ html {
   color: black;
 }
 .btn_viewMore {
-  margin-top: 20px;
-  width: 300px;
-  height: 50px;
+  margin-top: 1.25rem;
+  width: 50%;
   background-color: black;
   color: white;
   font-size: 1em;
+  padding: 1rem;
   border: 1px solid rgb(165, 16, 16);
   border-radius: 2px;
 }
@@ -330,14 +330,14 @@ html {
   display: flex;
   flex-flow: row nowrap;
   background-color: black;
-  padding-top: 100px;
+  padding-top: 10rem;
 }
 .container4-left {
   order: 1;
   display: flex;
   flex-flow: column nowrap;
   /* top right bottom left */
-  margin: 175px 40px 0px 100px;
+  margin: 10rem 4rem 0rem 7rem;
   color: white;
 }
 .container4-left h3 {
@@ -346,14 +346,14 @@ html {
 .container4-left h1 {
   font-family: "Bellota Text", cursive;
   font-weight: 100;
-  font-size: 4em;
+  font-size: 4rem;
 }
 .container4-left strong {
   font-weight: bold;
 }
 .container4-left p {
   color: rgb(94, 94, 94);
-  font-size: 1em;
+  font-size: 1rem;
 }
 .container4-right {
   background-image: url("images/blurredLights.jpg");
@@ -364,9 +364,7 @@ html {
   align-items: center;
   flex-grow: 2;
   height: 80vh;
-  width: 125vh;
   order: 2;
-  margin-left: 50px;
 }
 .display-box {
   display: flex;
@@ -376,176 +374,25 @@ html {
   border: 3px solid rgb(2, 2, 138);
   /* top right bottom left */
   width: 60%;
-  height: 420px;
+  height: 50%;
 }
 .display-box h2 {
   font-size: 1.7em;
-  margin: 10px 50px 5px 10px;
+  margin: 1rem 4rem 1.5rem 1rem;
 }
 .display-box p {
-  font-size: 1.2em;
+  font-size: 1.2rem;
+  align-self: center;
   font-weight: bold;
   margin-bottom: 25px;
   color: rgb(2, 2, 138);
-  margin: 0px 40px 5px 15px;
+  margin: 0rem 2rem 1rem 1.5rem;
 }
 /* end index page styling */
 
 .mod_movie {
   text-align: center;
   height: 6vh;
-}
-/* add movie page */
-.add_page {
-  display: flex;
-  flex-flow: column wrap;
-  align-items: center;
-  justify-content: center;
-  min-height: calc(100vh - 120px);
-}
-.add_page h1 {
-  margin: 5px 0px 10px 0px;
-}
-.add_page #release_inp,
-#rating_inp #direct_inp #title_inp #poster_inp {
-  width: 100%;
-  clear: both;
-}
-.add_page #r_del_disp {
-  text-align: center;
-}
-.add_page #rate_del_disp {
-  text-align: center;
-}
-.add_page #add_page_title {
-  font-weight: bold;
-}
-.add_page #genre_check label {
-  font-weight: normal;
-  text-decoration: none;
-  margin: 0px 0px 0px 3px;
-}
-.add_page #genre_check #g_label {
-  font-weight: bold;
-  text-decoration: underline;
-}
-.add_page #subm_button {
-  background-color: rgb(99, 99, 99);
-  color: white;
-}
-.add_page #subm_button:hover {
-  color: yellow;
-  cursor: pointer;
-}
-.add_page label {
-  margin: 0px 0px 10px 0px;
-  font-weight: bold;
-  text-decoration: underline;
-}
-/* end add page */
-
-/* ------------------------------------------------------admin page --------------------------------------------------------------*/
-.admin_page {
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: space-evenly;
-  min-height: calc(100vh - 120px);
-  background-color: black;
-}
-.admin_title {
-  margin: 1rem 0rem 1rem 8rem;
-}
-.admin_title h1 {
-  /* top right bottom left*/
-  color: rgb(155, 29, 29);
-}
-.admin_title p {
-  color: white;
-  margin-left: 3rem;
-  font-family: "Bellota Text", cursive;
-  text-decoration: underline;
-}
-.admin_options {
-  display: flex;
-  flex-flow: row;
-  justify-content: space-evenly;
-  align-content: space-around;
-  align-items: center;
-}
-.admin_options input {
-  background-color: black;
-  color: white;
-  padding: 1rem 4rem 1rem 4rem;
-  border: 1px solid rgba(201, 17, 17, 0.685);
-  border-radius: 2px;
-}
-.admin_options input:hover {
-  color: black;
-  cursor: pointer;
-  background-color: rgba(201, 17, 17, 0.685);
-}
-.stream_checkbox label {
-  text-decoration: none;
-  font-weight: normal;
-  margin: 0px 2px 10px 3px;
-}
-.stream_checkbox #stream_label {
-  font-weight: bold;
-  text-decoration: underline;
-}
-.add_page th {
-  text-decoration: underline;
-  font-weight: bold;
-  margin: 10px 0px 0px 10px;
-}
-.add_page #tomato_disp {
-  text-align: center;
-}
-.add_page h1 {
-  text-decoration: underline;
-}
-.add_page #chk_opt #chk_opt1 #chk_opt2 #chk_opt3 #chk_opt4 #chk_opt5 {
-  margin-right: 4px;
-}
-.del_movie {
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: start;
-  align-content: center;
-  min-height: calc(100vh - 120px);
-}
-.del_movie #del_title {
-  font-weight: bold;
-}
-.del_movie th {
-  font-weight: bold;
-  font-size: 17px;
-  text-decoration: underline;
-}
-.del_movie td {
-  text-align: center;
-}
-.del_movie h1 {
-  text-align: center;
-}
-.sign_up {
-  margin: auto;
-  width: 450px;
-  clear: both;
-}
-.mod_movie {
-  text-align: center;
-  margin: auto;
-  width: 1100px;
-  clear: both;
-}
-.mod_movie {
-  min-height: calc(100vh - 120px);
-}
-/*--------------------------------------------------------------END ADMIN PAGE----------------------------------------------------*/
-/* STILL PAGE */
-.stillsBody {
-  margin: 0;
 }
 /*--------------------------------------------------------------END STILL PAGE--------------------------------------------------- */
 /* footer styling */
@@ -560,8 +407,8 @@ footer {
   background-size: cover;
   background-repeat: no-repeat;
   color: rgb(255, 255, 255);
-  padding-top: 100px;
-  padding-left: 50px;
+  padding-top: 8rem;
+  padding-left: 3rem;
 }
 footer #accent {
   color: rgba(224, 28, 28, 0.76);
@@ -638,6 +485,8 @@ footer h3 {
   order: 1;
 }
 .modal_title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.692);
 }
 .modal_row2 {
@@ -701,7 +550,7 @@ p {
   /*top right bottom left */
   display: flex;
   flex-flow: column nowrap;
-  padding-top: 50px;
+  padding-top: 3rem;
   color: rgb(161, 11, 11);
   background-color: rgb(0, 0, 0);
   height: 99vh;
@@ -712,36 +561,34 @@ p {
   border-bottom: 1px solid rgb(143, 10, 10);
 }
 .moviesContainer1_seriesTab {
-  margin: 5px 5px 0px 5px;
+  margin: 0.5rem 0.5rem 0rem 0.5rem;
   border-top: 1px solid rgb(143, 10, 10);
   border-right: 1px solid rgb(143, 10, 10);
   border-left: 1px solid rgb(143, 10, 10);
-  padding: 5px 5px 0px 5px;
-  font-size: 30px;
+  padding: 0.5rem 0.5rem 0px 0.5rem;
+  font-size: 2rem;
   font-weight: bold;
+  background-color: black;
+  color: rgb(161, 11, 11);
 }
 .moviesContainer1_moviesTab {
   border-top: 1px solid red;
   border-right: 1px solid red;
   border-left: 1px solid red;
-  font-size: 30px;
+  background-color: black;
+  font-size: 2rem;
   font-weight: bold;
   color: red;
-  margin: 5px 5px 0px 5px;
-  padding: 5px 5px 0px 5px;
+  margin: 0.5rem 0.5rem 0rem 0.5rem;
+  padding: 0.5rem 0.5rem 0rem 0.5rem;
 }
-.moviesContainer1_moviesTab:hover {
-  cursor: pointer;
-  border-top: 2px solid red;
-  border-right: 2px solid red;
-  border-left: 2px solid red;
-}
-.moviesContainer1_seriesTab:hover {
+.movie_tabs button:hover {
   cursor: pointer;
   border-top: 1px solid red;
   border-right: 1px solid red;
   border-left: 1px solid red;
 }
+
 .seriesGallery {
   display: none;
   order: 4;
@@ -804,27 +651,16 @@ p {
   border-top: 20px solid rgb(43, 43, 43);
   border-bottom: 20px solid rgb(43, 43, 43);
 }
+.modalMovies h3 {
+  padding: 0.1rem;
+}
 .movies_modalTitle {
-  margin-bottom: 5px;
+  margin-bottom: 0.4rem;
+  font-size: 2rem;
   font-style: italic;
   text-decoration: underline;
 }
-.movies_modalImages {
-  margin: 30px 0px 0px 0px;
-}
-.movies_modalImages a {
-  text-decoration: none;
-  padding: 5px;
-  background-color: rgba(224, 28, 28, 0.76);
-  border: 1px solid rgba(117, 13, 13, 0.76);
-  color: black;
-  border-radius: 5px;
-  box-shadow: 1px 1px 1px black;
-}
-.movies_modalImages a:hover {
-  border: 2px solid black;
-  color: white;
-}
+
 .overlayMovies {
   position: fixed;
   top: 0;

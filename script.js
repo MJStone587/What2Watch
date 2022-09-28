@@ -14,12 +14,8 @@ const overlayMovies = document.querySelector(".overlayMovies");
 const modalMovies = document.querySelector(".modalMovies");
 const stillsBtn = document.querySelector(".stillsBtn");
 const stillsDiv = document.querySelector(".stills");
-document.cookie = "username=unknown";
-let x = document.cookie;
 
-console.log(x);
-
-/* Populate Container 2 with data from API */
+/* Populate Container 2 with data from API...top 4 movies / series*/
 const populateCont2 = function (data) {
   for (var i = 0; i < 4; i++) {
     const posterImg = document.querySelectorAll(".poster_img");
@@ -125,7 +121,8 @@ const populateMoviesModal = (id, data) => {
   const modalMoviesTomato = document.querySelector(".movies_modalTomato");
   const modalMoviesPlot = document.querySelector(".movies_modalPlot");
   const stillsBtn = document.querySelector(".stillsBtn");
-  // can use the find() function or filter() for IE browser to produce same results as below
+
+  //Populate movie modal with for loop from data(array of objects in json)
   for (var i = 0, numMovies = data.movies.length; i < numMovies; i++) {
     if (data.movies[i].title == id) {
       modalMoviesTitle.innerHTML = id;
@@ -198,6 +195,7 @@ const populateStills = (data) => {
     newImg.src = data.movies[i].stills[a];
   }
 };
+
 /* Fetch Data from API */
 const fetchData = function () {
   fetch("./database/movieDB.json")
